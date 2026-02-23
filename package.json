@@ -1,0 +1,18 @@
+{
+  "name": "ai-chatbot-webapp",
+  "version": "1.0.0",
+  "description": "A simple AI chatbot webapp with a Node backend and vanilla frontend.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "test": "node --test"
+  },
+  "keywords": [
+    "chatbot",
+    "ai",
+    "webapp"
+  ],
+  "author": "",
+  "license": "MIT"
+}
