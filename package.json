@@ -1,0 +1,19 @@
+{
+  "name": "ai-chatbot-webapp",
+  "version": "2.0.0",
+  "private": true,
+  "description": "AI chatbot webapp built with Next.js and MongoDB for chat history.",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "mongodb": "^6.8.0",
+    "next": "14.2.5",
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  },
+  "type": "module"
+}
