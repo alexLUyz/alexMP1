@@ -1,22 +1,32 @@
-# AI Chatbot Webapp
+# AI Chatbot Webapp (Next.js + MongoDB)
 
-A simple AI chatbot webapp built with **Node.js** and **vanilla HTML/CSS/JS**.
+This project is an AI chatbot webapp using **Next.js (App Router)** and **MongoDB** for chat history storage.
 
 ## Features
 
-- Chat-style UI
-- Backend API endpoint (`POST /api/chat`)
-- Lightweight AI-style reply logic
-- Basic unit tests using Node's built-in test runner
-- Zero third-party runtime dependencies
+- Next.js framework with API routes
+- `POST /api/chat` endpoint for chatbot responses
+- MongoDB persistence for user/bot messages (`messages` collection)
+- In-memory fallback when MongoDB is unavailable (for local/test resilience)
+- Responsive chat UI
+
+## Environment variables
+
+Create a `.env.local` file:
+
+```bash
+MONGODB_URI=mongodb://localhost:27017
+MONGODB_DB=ai_chatbot
+```
 
 ## Run locally
 
 ```bash
-npm start
+npm install
+npm run dev
 ```
 
-Then open `http://localhost:3000`.
+Open http://localhost:3000.
 
 ## Run tests
 

@@ -1,6 +1,6 @@
-const test = require('node:test');
-const assert = require('node:assert/strict');
-const { buildAiReply } = require('../server');
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import { buildAiReply } from '../lib/chatbot.js';
 
 test('buildAiReply greets user', () => {
   const output = buildAiReply('hello there');

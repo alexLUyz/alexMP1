@@ -1,5 +1,4 @@
 :root {
-  color-scheme: light dark;
   --bg: #0f172a;
   --card: #1e293b;
   --text: #e2e8f0;
@@ -24,7 +23,7 @@ body {
 }
 
 .container {
-  width: min(720px, 100%);
+  width: min(760px, 100%);
   background: color-mix(in srgb, var(--card) 88%, black);
   border: 1px solid #334155;
   border-radius: 16px;
@@ -53,6 +52,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 0.7rem;
+  margin-bottom: 0.9rem;
 }
 
 .message {
@@ -74,7 +74,6 @@ body {
 }
 
 .chat-form {
-  margin-top: 0.9rem;
   display: flex;
   gap: 0.6rem;
 }
@@ -99,7 +98,12 @@ body {
   cursor: pointer;
 }
 
-.chat-form button:hover {
+.chat-form button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.chat-form button:hover:not(:disabled) {
   background: var(--accent-strong);
 }
 
