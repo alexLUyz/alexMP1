@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useState } from "react";
 import type { Singer, Song } from "@/lib/types";
+import { voiceProviders } from "@/lib/voiceProviders";
 
 type GenerationResponse = {
   id: string;
@@ -140,6 +141,23 @@ export default function HomePage() {
             ) : null}
           </>
         ) : null}
+      </section>
+
+      <section className="card">
+        <h2>Where to get a voice transformation service?</h2>
+        <p>Start with one of these providers based on your launch goals:</p>
+        <ul>
+          {voiceProviders.map((provider) => (
+            <li key={provider.id}>
+              <strong>{provider.name}</strong> — {provider.bestFor}.{" "}
+              <a href={provider.website} target="_blank" rel="noreferrer">
+                Website
+              </a>
+              <br />
+              <small>{provider.notes}</small>
+            </li>
+          ))}
+        </ul>
       </section>
 
       <section className="card">

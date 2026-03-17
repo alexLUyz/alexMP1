@@ -38,6 +38,26 @@ Open http://localhost:3000.
 - `POST /api/generate`: create generation request `{ singerId, songId }`.
 - `GET /api/generations/:id`: check generation status.
 
+
+## Where to get voice transformation service
+
+You have two practical paths:
+
+1. **Managed API provider (fastest launch)**
+   - **ElevenLabs** (`https://elevenlabs.io`) — strong API docs, quick integration.
+   - **Kits AI** (`https://www.kits.ai`) — music/singing-oriented workflows.
+   - **Voicify AI** (`https://voicify.ai`) — creator-oriented voice-cover features.
+
+2. **Self-hosted model stack (most control)**
+   - **RVC / So-VITS-SVC** style pipelines for custom training/inference.
+   - Best when you need full control over quality, privacy, and cost model.
+
+### Recommendation for this app
+
+- Start with **ElevenLabs** or **Kits AI** to validate UX and demand quickly.
+- Keep provider calls behind a single server-side adapter so you can switch vendors without frontend rewrites.
+- Confirm each provider's policy for copyrighted content and voice rights before launch.
+
 ## What you need to provide next
 
 - Spotify app credentials.
